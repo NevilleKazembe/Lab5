@@ -1,23 +1,15 @@
 #pragma once
-
 #include <iostream>
 using namespace std;
 
 class Box {
 public:
-    
-    Box();
+    Box();  // Default constructor
+    Box(const double newLength, const double newBreadth, const double newHeight);  // Overloaded constructor
+    ~Box();  // Destructor
 
-    
-    Box(const double newLength, const double newBreadth, const double newHeight);
+    double GetVolume();  // Calculates volume
 
-    
-    ~Box();
-
-    
-    double GetVolume();
-
-    
     void SetLength(double len);
     void SetBreadth(double bre);
     void SetHeight(double hei);
@@ -26,7 +18,7 @@ public:
     Box operator+(const Box& b);
 
 private:
-    double length;    // Length of a box
-    double breadth;   // Breadth of a box
-    double height;    // Height of a box
+    double length;   // Length of a box
+    double breadth;  // Breadth of a box
+    double height;   // Height of a box
 };
